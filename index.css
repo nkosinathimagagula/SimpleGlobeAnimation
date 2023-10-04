@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+}
+
+.webgl {
+    position: fixed;
+}
+
+.info {
+    position: absolute;
+    color: aliceblue;
+    width: 20vw;
+    margin: 2rem;
+    font-family: monospace;
+}
+
+.info h1 {
+    margin-bottom: 2vh;
+    font-size: xx-large;
+}
+
+.info p {
+    font-size: large;
+    margin-bottom: 2vh;
+}
+
+.animateButton {
+    background-color: transparent;
+	border: 1px solid gray;
+	border-radius: 5px;
+	cursor: pointer;
+	color: aliceblue;
+	overflow: hidden;
+	padding: 1em 2em;
+	position: relative;
+}
