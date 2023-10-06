@@ -27,7 +27,7 @@ const BasicContent = (props: {setButtonClick: Dispatch<SetStateAction<boolean>>}
                 className='my-4 mx-9 py-1 px-4 w-24 border-solid border-slate-800 border-[1px] backdrop-blur-sm rounded-lg hover:shadow-sm hover:shadow-cyan-50 hover:backdrop-blur-2xl'
                 onClick={handleReset}
             >
-                Reset
+                Refresh
             </button>
         </div>
     )

@@ -106,7 +106,7 @@ const Earth = (props: {buttonClick: boolean, setButtonClick: Dispatch<SetStateAc
                     show={showCurve}
                 />
             </mesh>
-            <OrbitControls enableRotate={false} autoRotate={autoRotate} />
+            <OrbitControls enableRotate={false} autoRotate={autoRotate} autoRotateSpeed={0.8} />
         </>
     )
 }
