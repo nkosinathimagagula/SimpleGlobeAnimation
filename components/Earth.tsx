@@ -29,6 +29,7 @@ const Earth = (props: {buttonClick: boolean, setButtonClick: Dispatch<SetStateAc
             setAutoRotate(false)
             props.setButtonClick(false)
 
+            // reset the camera to its default location
             gsap.to(
                 state.camera.position,
                 {
@@ -45,8 +46,8 @@ const Earth = (props: {buttonClick: boolean, setButtonClick: Dispatch<SetStateAc
                 {
                     z: 1.15,
                     duration: 5,
-                    delay: 3
-
+                    delay: 3,
+                    ease: Power2.easeInOut
                 }
             )
             gsap.to(
@@ -55,7 +56,8 @@ const Earth = (props: {buttonClick: boolean, setButtonClick: Dispatch<SetStateAc
                     y: -2,
                     x: -0.5,
                     duration:5,
-                    delay:3
+                    delay:3,
+                    ease: Power2.easeInOut
                 }
             )
             
@@ -65,7 +67,8 @@ const Earth = (props: {buttonClick: boolean, setButtonClick: Dispatch<SetStateAc
                     {
                         z: 1.5,
                         duration: 3,
-                        delay: 0.5
+                        delay: 0.5,
+                        ease: Power2.easeInOut
                     }
                 )
 
@@ -74,7 +77,8 @@ const Earth = (props: {buttonClick: boolean, setButtonClick: Dispatch<SetStateAc
                     {
                         x: - 0.1,
                         duration:3,
-                        delay: 0.5
+                        delay: 0.5,
+                        ease: Power2.easeInOut
                     }
                 )
 
