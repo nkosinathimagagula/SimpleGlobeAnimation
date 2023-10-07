@@ -17,18 +17,20 @@ const BasicContent = (props: {setButtonClick: Dispatch<SetStateAction<boolean>>}
                 reiciendis soluta! Fugiat saepe totam atque nemo ipsa porro commodi corporis 
                 iusto inventore! Quo id perspiciatis doloribus non eaque rem!
             </p>
-            <button 
-                className='my-4 mx-9 py-1 px-4 w-24 border-solid border-slate-800 border-[1px] backdrop-blur-sm rounded-lg hover:shadow-sm hover:shadow-cyan-50 hover:backdrop-blur-2xl'
-                onClick={handleClick}
-            >
-                Animate
-            </button>
-            <button 
-                className='my-4 mx-9 py-1 px-4 w-24 border-solid border-slate-800 border-[1px] backdrop-blur-sm rounded-lg hover:shadow-sm hover:shadow-cyan-50 hover:backdrop-blur-2xl'
-                onClick={handleRefresh}
-            >
-                Refresh
-            </button>
+            <div className='w-full my-4 flex flex-row justify-center gap-10'>
+                <button 
+                    className='py-1 px-4 w-24 border-solid border-slate-800 border-[1px] backdrop-blur-sm rounded-lg hover:shadow-sm hover:shadow-cyan-50 hover:backdrop-blur-2xl'
+                    onClick={handleClick}
+                >
+                    Animate
+                </button>
+                <button 
+                    className='py-1 px-4 w-24 border-solid border-slate-800 border-[1px] backdrop-blur-sm rounded-lg hover:shadow-sm hover:shadow-cyan-50 hover:backdrop-blur-2xl'
+                    onClick={handleRefresh}
+                >
+                    Refresh
+                </button>
+            </div>
         </div>
     )
 }
