@@ -1,16 +1,14 @@
 "use client"
+import dynamic from "next/dynamic";
 import { useState } from "react";
 
-import BasicContent from "@/components/BasicContent"
-import CanvasComponent from "@/components/CanvasComponent"
+const EarthGlobe = dynamic(() => import('../components/EarthGlobe').then((mod) => mod.default), { ssr: false })
 
 export default function Home() {
-  const [buttonClick, setButtonClick] = useState<boolean>(false)
 
   return (
     <main className="w-full h-screen">
-      <BasicContent setButtonClick={setButtonClick} />
-      <CanvasComponent buttonClick={buttonClick} setButtonClick={setButtonClick} />
+      <EarthGlobe />
     </main>
   )
 }
