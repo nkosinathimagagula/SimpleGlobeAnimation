@@ -3,6 +3,17 @@
 @tailwind utilities;
 
 html {
-  background-color: #09070b;
+  background: linear-gradient(180deg, #22838c -15.8%, #040f15 59.12%);
   overflow: hidden;
+}
+
+.label {
+  background-color: transparent;
+  color: #d5eade;
+  border-radius: 2px;
+  backdrop-filter: blur(1px);
+  font-size: 0.7em;
+  margin-left: 3em;
+  width: 2.3vw;
+  cursor: pointer;
 }
