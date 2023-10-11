@@ -1,4 +1,4 @@
-// for globe.gl S is -
+// for globe.gl S & W are -
 export const cities = {
     coordinates: [
         // {

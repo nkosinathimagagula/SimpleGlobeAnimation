@@ -1,14 +1,5 @@
 import * as THREE from "three";
 
-// export const getGlobeCoordinates = (latitude: number, longitude: number): GlobeCoordinates => {
-
-//     return {
-//         x: - (Math.sin(latitude) * Math.cos(longitude)),
-//         y: - Math.cos(latitude),
-//         z: Math.sin(latitude) * Math.sin(longitude)
-//     }
-// }
-
 
 export const generateStars = (count: number, spread: number) => {
     const particleGeometry = new THREE.BufferGeometry()
@@ -24,7 +15,7 @@ export const generateStars = (count: number, spread: number) => {
     const particleMaterial = new THREE.PointsMaterial({
         size: 0.1,
         sizeAttenuation: true,
-        color: "#ffffff",
+        color: "#d5eade",
     })
 
     return new THREE.Points(particleGeometry, particleMaterial)

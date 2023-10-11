@@ -1,9 +1,9 @@
 import { MutableRefObject, useEffect, useRef } from "react";
 import Globe, { GlobeMethods } from "react-globe.gl";
+import { MeshStandardMaterial } from "three";
 
 import { cities, lines } from "@/constants";
 import map from '../public/map/custom.geo.json';
-import { MeshStandardMaterial } from "three";
 import { generateStars } from "@/utils";
 
 
@@ -11,7 +11,7 @@ const EarthGlobe = () => {
   const globeRef = useRef() as MutableRefObject<GlobeMethods>
 
   useEffect(() => {
-    globeRef.current.pointOfView({lat: -10, lng: 25, altitude: 1.5 })
+    globeRef.current.pointOfView({lat: -10, lng: 25, altitude: 2 })
     globeRef.current.controls().autoRotate = true
     globeRef.current.controls().autoRotateSpeed = 0.1
     globeRef.current.controls().enableZoom = false
@@ -22,6 +22,15 @@ const EarthGlobe = () => {
     const stars = generateStars(500, 10000)
 
     scene.add(stars)
+
+    setTimeout(() => {
+      const directionalLight = globeRef.current.scene().children.find((object) => object.type === "DirectionalLight")
+
+      if (directionalLight) {
+        directionalLight.position.set(10, 13, 10)
+      }
+
+    }, 1)
   }, [])
 
   return (
