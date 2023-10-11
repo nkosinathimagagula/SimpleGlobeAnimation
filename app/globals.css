@@ -8,7 +8,7 @@ html {
 }
 
 .label {
-  background-color: transparent;
+  background-color: #062a2d5a;
   color: #d5eade;
   border-radius: 2px;
   backdrop-filter: blur(1px);

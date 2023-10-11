@@ -11,10 +11,10 @@ const EarthGlobe = () => {
   const globeRef = useRef() as MutableRefObject<GlobeMethods>
 
   useEffect(() => {
-    globeRef.current.pointOfView({lat: 2.5, lng: 25, altitude: 1.5 })
+    globeRef.current.pointOfView({lat: 2.5, lng: 25, altitude: 1.4 })
     globeRef.current.controls().autoRotate = true
     globeRef.current.controls().autoRotateSpeed = - 0.1
-    // globeRef.current.controls().enableZoom = false
+    globeRef.current.controls().enableZoom = false
     globeRef.current.controls().enableDamping = true
 
     const scene = globeRef.current.scene()
